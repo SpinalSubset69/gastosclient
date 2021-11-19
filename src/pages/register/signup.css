@@ -1,0 +1,11 @@
+.signupWrapper{
+    width: 100vw;
+    height: 100vh;
+    background: #222831;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    flex-direction: column;
+    background-image: url('../../assets/images/galaxy.gif');
+    object-fit: contain;
+}

@@ -1,0 +1,77 @@
+.loginCardWrapper{
+    background: white;
+    width: 50vw;
+    height: 50vh;
+    border-radius: 10px;
+    box-shadow: -1px 7px 5px -2px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -1px 7px 5px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 7px 5px -2px rgba(0,0,0,0.75);
+}
+
+.loginCardContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.loginCardForm{
+    display: flex;
+    flex-direction: column;    
+    align-items: center;  
+    height: 100%;      
+}
+
+.loginCardSpan{
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.loginCardInput{
+    padding: 5px;
+    font-size: 15px;
+    font-weight: 400;
+    border-radius: 5px;
+    height: 3vh;
+    width: 25vw;
+    text-align: center;    
+    border: none;
+}
+
+.loginCardInput:focus{
+    outline: none;
+}
+
+.loginCardLogInButton{    
+    border: none;
+    margin-top: 25px;
+    padding: 10px;
+    font-size: 15px;
+    background: #DD105E;
+    color: white;
+    font-weight: 500;
+    border-radius: 10px;    
+    width: 100%;    
+}
+
+.loginCardLogInButton:hover{
+    cursor: pointer;
+    background: #222831;
+    transition: 0.2s ease-in;
+}
+
+.signUpContent{
+    color: black;
+}
+
+.signUpLink{
+    text-decoration: none;
+    color: #46466E;
+}
+
+@media (max-width: 615px) {
+    .loginCardWrapper{
+        width: 90vw;
+    }
+  }

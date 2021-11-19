@@ -1,0 +1,69 @@
+.cardWrapper {
+  margin-top: 30px;
+  height: 30vh;
+  width: 25vw;
+  background: white;  
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);  
+}
+ 
+.amountForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.formInput {
+  padding: 8px;
+  font-weight: 500;
+  border-radius: 5px;
+  width: 20vw;
+  border: none;
+  margin-bottom: 15px;
+}
+
+.formButton {
+  margin-top: 10px;
+  width: 20vw;
+  padding: 5px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  background: white;
+}
+
+.formButton:hover {
+  background: #f05454;
+  color: white;
+  transition: 0.3s all ease-in-out;
+}
+
+@media (max-width: 1361px){
+  .cardWrapper {        
+      width: 33vw;           
+  }
+}
+
+@media (max-width: 1110px){
+  .cardWrapper {        
+      width: 45vw;        
+  }
+  .amountForm .formInput{    
+    width: 70%;
+  }
+
+  .amountForm .formButton{    
+    width: 70%;
+  }
+}
+
+@media (max-width: 615px){
+  .cardWrapper {        
+      font-size: 12px;
+      width: 90vw;
+  }
+}

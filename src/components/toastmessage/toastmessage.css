@@ -1,0 +1,54 @@
+.messageWrapperSucess{
+    display: flex;
+    justify-content: center;
+    background: green;
+    color: white;
+    border-radius: 10px;    
+    transform: translateY(-45px);
+    transition: all 0.8s ease-in-out;
+    text-align: center;
+    font-weight: 500;
+    position: absolute;
+    animation: showToast 0.5s ease-in-out both; 
+    padding: 10px;
+}
+
+.messageWrapperDanger{
+    display: flex;
+    justify-content: center;
+    background: red;
+    color: white;    
+    border-radius: 10px;    
+    padding: 15px;    
+    transition: all 0.8s ease-in-out;
+    text-align: center;
+    font-weight: 500;    
+    position: absolute;    
+    transform: translateY(-45px);
+    animation: showToast 0.5s ease-in-out both;    
+}
+
+.disappear{
+    animation: disappear 0.5a ease-in-out both;
+}
+
+
+@keyframes showToast {
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+
+
+@keyframes disappear {
+    from {
+      margin-right: 0px;
+    }
+    to {
+      margin-right: 1000px;
+      opacity: 0;
+    }
+  }
+  

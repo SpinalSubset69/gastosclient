@@ -1,0 +1,234 @@
+.cardExpensesWrapper {
+  height: 95vh;
+  width: 35vw;
+  position: sticky;
+  overflow: scroll;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  background: url('./../../assets//images/rain.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(128, 128, 128, 0.767);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+}
+
+.cardHeaderImg {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.cardHeaderInfo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.removeIcon {
+  width: 40px;
+  height: 40px;
+}
+.removeIcon:hover {
+  cursor: pointer;
+}
+
+.cardHeaderInfoStatus {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.expensesList {
+  list-style: none;
+  width: 90%;
+}   
+
+.expensesListItem {
+  border-radius: 10px;
+  padding: 3px;
+  background: white;
+  background: #2C272E;
+  color: white;
+  animation: appear 0.2s ease-in-out both;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.itemIcon {
+  width: 50px;
+  height: 50px;
+}
+
+.expensesListItem:hover {
+  transform: scale(1.02);
+  transition: all 0.2s ease-in-out;  
+}
+
+.listItemTitle {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.listItemInfo {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 18px;
+}
+
+.filterContainer{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;  
+  width: 100%;
+}
+
+.filterInputContainer{
+  display: flex;
+  align-items: center;
+}
+
+.filterInput{
+  border: none;
+  border-radius: 10px;
+  margin-left: 5px;
+  font-weight: 500;
+  padding-left: 5px;
+  width: 140px;  
+  padding: 5px;
+}
+
+
+.sortByContainer{
+  display: flex;
+  align-items: center;
+}
+
+.dropDown{
+  position: relative;
+  display: inline-block;
+  margin-left: 5px;
+  background: #2C272E;
+  border-radius: 10px;
+  width: 6vw;
+  padding: 5px;
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+
+.dropDown span{
+  cursor: pointer;
+}
+
+.dropdown-content{
+  display: none;
+  position: absolute;
+  border-radius: 10px;
+  background-color: #2C272E;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  transform: translateX(-50px);
+  z-index: 1;
+}
+
+.dropDown:hover .dropdown-content {  
+  display: block;    
+}
+
+.dropdown-element{
+  cursor: pointer;
+  width: 100%;
+  background: #F05454;
+  border-radius: 5px;
+}
+
+.disappear {
+  animation: removeExpenseCard 0.5s ease-in both;
+}
+
+.noDataContainer{
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes appear {
+  from {
+    margin-right: 400px;
+  }
+  to {
+    margin-right: 0;
+  }
+}
+
+@keyframes removeExpenseCard {
+  from {
+    margin-right: 0px;
+  }
+  to {
+    margin-right: 1000px;
+    opacity: 0;
+  }
+}
+
+@media (max-width: 1390px) {
+  .cardExpensesWrapper {
+    width: 70vw;
+    height: 60vh;
+  }
+}
+
+@media (max-width: 615px) {
+  .cardExpensesWrapper {
+    margin-top: 20px;
+    font-size: 14px;
+    width: 90vw;    
+    margin-bottom: 25px; 
+  }
+
+  .expensesList {
+    width: 85%;
+  }
+
+  .expensesListItem{
+    font-size: 10px;
+  }
+
+  .cardHeader{
+    margin-top: 15px;
+    flex-direction: column;
+    margin-left: 0;
+  }
+
+  .filterContainer{
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+}
